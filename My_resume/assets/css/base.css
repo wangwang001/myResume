@@ -1,0 +1,225 @@
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form {
+    margin:0;
+}
+
+ul,ol {
+    padding-left:0;
+    list-style-type:none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*image with no-border*/
+a img {
+    border:0;
+}
+
+img{
+    border:0;
+    vertical-align: middle;
+}
+
+.btn {
+    border: 0;
+    outline: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*清楚浮动*/
+.fix {
+    *zoom: 1;
+}
+
+.fix:after {
+    display: block;
+    content: "clear";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+@font-face {
+    font-family: YH;
+    src: local("Microsoft Yahei");
+}
+
+/*鼠标选中的颜色*/
+/* webkit, opera, IE9 */
+::selection {
+    background: rgba(255,255,255, .5);
+}
+/* mozilla firefox */
+::-moz-selection {
+    background: rgba(255,255,255, .5);
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('../../css/fonts/iconfont.eot?t=1500818447360'); /* IE9*/
+    src: url('../../css/fonts/iconfont.eot?t=1500818447360#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../css/fonts/iconfont.woff?t=1500818447360') format('woff'), /* chrome, firefox */
+    url('../../css/fonts/iconfont.ttf?t=1500818447360') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../css/fonts/iconfont.svg?t=1500818447360#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qq:before { content: "\e60a"; }
+
+.icon-backHome:before { content: "\e67b"; }
+
+.icon-back-top:before { content: "\e6a7"; }
+
+.icon-jump:before { content: "\e624"; }
+
+.icon-weixin:before { content: "\e600"; }
+
+.icon-weibo-copy:before { content: "\e601"; }
+
+.icon-xiangce:before { content: "\e61b"; }
+
+.icon-arrow-right:before { content: "\e602"; }
+
+.icon-link:before { content: "\e603"; }
+
+.icon-close:before { content: "\e604"; }
+
+.icon-arrow-left:before { content: "\e620"; }
+
+.icon-github:before { content: "\e621"; }
+
+/*loading*/
+.loader-container {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+}
+.loader:before, .loader:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+}
+.loader:before {
+    animation: before 2s infinite;
+}
+.loader:after {
+    animation: after 2s infinite;
+}
+
+@keyframes before {
+    0% {
+        width: 0.5em;
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+    70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    100% {
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+}
+@keyframes after {
+    0% {
+        height: 0.5em;
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+    35% {
+        height: 2.5em;
+        box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+    70% {
+        height: 0.5em;
+        box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+    100% {
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+}
+
+.loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+}
+
+/*返回顶部*/
+.back-top {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    transition: all .8s ease;
+}
+
+.back-top a {
+    display: block;
+    height: 42px;
+    width: 42px;
+    color: #fff;
+    text-align: center;
+    background: rgba(17, 169, 226, 0.78);
+    overflow: hidden;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.back-top a i {
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.back-top a:hover {
+    background: rgba(17, 169, 226, 1);
+}

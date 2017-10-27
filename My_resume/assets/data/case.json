@@ -1,0 +1,59 @@
+{
+  "status":1,
+  "result": {
+    "module": [
+      {
+        "caseTitle": "汽车商城（微信公众号）",
+        "text": "页面设计及前端制作",
+        "caseImg": "../assets/images/case1.png",
+        "caseLink": {
+          "flag": true,
+          "link": "http://m.xxt999.com/"
+        },
+        "img": {
+          "flag": false,
+          "link": ""
+        }
+      },
+      {
+        "caseTitle": "直播间",
+        "text": "前端页面制作以及交互设计",
+        "caseImg": "../assets/images/case2.png",
+        "caseLink": {
+          "flag":true,
+          "link": "http://119.23.244.41/fid/666"
+        },
+        "img":{
+          "flag": false,
+          "link": ""
+        }
+      },
+      {
+        "caseTitle": "警务云门户",
+        "text": "前端页面制作以及交互设计",
+        "caseImg": "../assets/images/case.jpg",
+        "caseLink": {
+          "flag":false,
+          "link": "http://www.baidu.com"
+        },
+        "img":{
+          "flag": false,
+          "link": ""
+        }
+      },
+      {
+        "caseTitle": "仿慕课网",
+        "text": "页面制作，实现交互效果",
+        "caseImg": "../assets/images/case4.png",
+        "caseLink": {
+          "flag":true,
+          "link": "https://qingtan99.github.io/Imitation_imooc/index"
+        },
+        "img":{
+          "flag": false,
+          "link": ""
+        }
+      }
+    ]
+  }
+}
